@@ -18,5 +18,14 @@ public class PedidoComercioAdherido {
 		}
 		return total;
 	}
+
+	public int cantidadDeProductos() {
+		int total = 0;
+		Iterator<DetallePedido> iter = detalle.iterator();
+		while(iter.hasNext()) {
+			total += iter.next().cantidad;
+		}
+		return total;
+	}
 	
 }
