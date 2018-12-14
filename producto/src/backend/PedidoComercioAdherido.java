@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Iterator;
 import java.util.List;
 
 public class PedidoComercioAdherido {
@@ -11,11 +12,10 @@ public class PedidoComercioAdherido {
 	
 	public BigDecimal calcularTotal() {
 		BigDecimal total = BigDecimal.ZERO;
-
-		for (DetallePedido detallePedido : detalle) {
-			total = total.add(detallePedido.calcularSubotal());
+		Iterator<DetallePedido> iter = detalle.iterator();
+		while (iter.hashNext()) {
+			total = total.add(iter.next().calculatSubtotal());
 		}
-
 		return total;
 	}
 	
