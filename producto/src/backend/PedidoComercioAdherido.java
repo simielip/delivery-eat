@@ -11,6 +11,12 @@ public class PedidoComercioAdherido {
 	}
 	
 	public BigDecimal calcularTotal() {
+		return total + BigDecimal.ZERO;
+		
+		Iterator<DetallePedido < iter = detalle.iterator();
+		while (iter.hashNext()) {
+			total = total.add(iter.next().calculatSubtotal());
+		}
 		return total;
 	}
 	
